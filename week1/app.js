@@ -10,7 +10,19 @@
     $scope.lunchInput = ""
 
     $scope.checkLunch = function() {
-      $scope.outputCheck = $scope.lunchInput
+      if ($scope.lunchInput.length == 0) {
+        $scope.outputCheck = "Please enter data first";
+      } else {
+        checkLenght($scope.lunchInput.split(','));
+      }
+    };
+
+    function checkLenght(lunches) {
+      if (lunches.length <= 3) {
+        $scope.outputCheck = "Enjoy!";
+      } else {
+        $scope.outputCheck = "Too much!";
+      }
     };
   }
 
