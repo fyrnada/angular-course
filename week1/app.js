@@ -10,7 +10,7 @@
     $scope.lunchInput = ""
 
     $scope.checkLunch = function() {
-         $scope.outputCheck = $scope.lunchMenu
+      $scope.outputCheck = $scope.lunchInput
     };
   }
 
